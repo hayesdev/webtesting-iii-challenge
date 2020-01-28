@@ -9,7 +9,9 @@ test("displays locked if lock button is clicked, unlocked if unlock button click
   // Arrange
   const { getByText } = render(<Display />);
 
-  const lockButton = getByText("Locked");
+  const lockButton = getByText(/Locked/i);
+  const unlockButton = getByText(/Unlocked/i);
 
   fireEvent.click(lockButton);
+  fireEvent.click(unlockButton);
 });
