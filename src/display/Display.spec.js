@@ -12,6 +12,13 @@ test("displays locked if lock button is clicked, unlocked if unlock button click
   const lockButton = getByText(/Locked/i);
   const unlockButton = getByText(/Unlocked/i);
 
+  // Act
+
   fireEvent.click(lockButton);
   fireEvent.click(unlockButton);
+
+  // Assert
+
+  //   expect(lockButton).toHaveBeenCalledTimes(1);
+  //   expect(unlockButton).toHaveBeenCalledTimes(1);
 });
